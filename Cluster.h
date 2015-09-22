@@ -29,12 +29,12 @@ namespace Clustering {
 
         // The big three: cpy ctor, overloaded operator=, dtor
         Cluster(const Cluster &);
-        Cluster &operator=(const Cluster &);
+        //Cluster &operator=(const Cluster &);
         ~Cluster();
 
         // Set functions: They allow calling c1.add(c2.remove(p));
         void add(const PointPtr &);
-        const PointPtr &remove(const PointPtr &);
+        /*const PointPtr &remove(const PointPtr &);
 
         // Overloaded operators
 
@@ -59,7 +59,7 @@ namespace Clustering {
         friend const Cluster operator-(const Cluster &lhs, const Cluster &rhs);
 
         friend const Cluster operator+(const Cluster &lhs, const PointPtr &rhs);
-        friend const Cluster operator-(const Cluster &lhs, const PointPtr &rhs);
+        friend const Cluster operator-(const Cluster &lhs, const PointPtr &rhs);*/
 
     };
 
