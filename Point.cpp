@@ -167,21 +167,39 @@ bool Clustering::operator!=(const Clustering::Point &point, const Clustering::Po
 
 bool Clustering::operator<(const Clustering::Point &point, const Clustering::Point &point1) {
 
-    for (int i = 0; i < point.m_Dim; i++)
+    for (int i = 0; i < point.m_Dim; i++){
+        if (point.m_Values[i] < point1.m_Values[i])
+            return true;
+    }
     return false;
 }
 
-/*bool Clustering::operator>(const Clustering::Point &point, const Clustering::Point &point1) {
+bool Clustering::operator>(const Clustering::Point &point, const Clustering::Point &point1) {
+
+    for (int i = 0; i < point.m_Dim; i++){
+        if (point.m_Values[i] > point1.m_Values[i])
+            return true;
+    }
     return false;
 }
 
 bool Clustering::operator<=(const Clustering::Point &point, const Clustering::Point &point1) {
+
+    for (int i = 0; i < point.m_Dim; i++){
+        if (point.m_Values[i] <= point1.m_Values[i])
+            return true;
+    }
     return false;
 }
 
 bool Clustering::operator>=(const Clustering::Point &point, const Clustering::Point &point1) {
+
+    for (int i = 0; i < point.m_Dim; i++){
+        if (point.m_Values[i] >= point1.m_Values[i])
+            return true;
+    }
     return false;
-}*/
+}
 
 std::ostream &Clustering::operator<<(std::ostream &out, const Clustering::Point &point) {
 
