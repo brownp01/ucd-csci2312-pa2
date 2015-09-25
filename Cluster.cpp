@@ -32,7 +32,7 @@ void Clustering::Cluster::add(Clustering::PointPtr const &ptr) {
         LNodePtr c = points, n = points->next, a = new LNode(ptr, nullptr);
     }
 
-    for (LNodePtr curr = points; curr != nullptr; curr = curr->next){
+    //for (LNodePtr curr = points; curr != nullptr; curr = curr->next){
 
     }
 
