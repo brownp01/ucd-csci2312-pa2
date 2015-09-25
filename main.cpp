@@ -19,14 +19,29 @@ int main(){
     Point p3(4);
     double distance = 0;
 
+
+
     cout << "p1 = " << p1;
     cout << endl;
 
     cout << "p2 = " << p2;
     cout << endl;
 
-    cout << "p3 = " << p3;
+    //Test setValue function
+
+    p3.setValue(0, 4);
+    p3.setValue(1, 5);
+    p3.setValue(2, 6);
+    p3.setValue(3, 7);
+
+    //Test getValue function
+
+    cout << "p3 = ";
+
+    for (int i = 0; i < 4; i++)
+        cout << p3.getValue(i) << " ";
     cout << endl;
+
 
     //Test distanceTo function
 
