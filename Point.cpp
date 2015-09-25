@@ -133,18 +133,18 @@ Clustering::Point &Clustering::operator-=(Clustering::Point &point, const Cluste
 
 const Clustering::Point Clustering::operator+(const Clustering::Point &point, const Clustering::Point &point1) {
 
-    for (int i = 0; i < point.m_Dim; i++)
-        point.m_Values[i] += point1.m_Values[i];
+    Point(p) = point;
+    p += point1;
 
-    return point;
+    return p;
 }
 
 const Clustering::Point Clustering::operator-(const Clustering::Point &point, const Clustering::Point &point1) {
 
-    for (int i = 0; i < point.m_Dim; i++)
-        point.m_Values[i] -= point1.m_Values[i];
+    Point(p) = point;
+    p -= point1;
 
-    return point;
+    return p;
 }
 
 bool Clustering::operator==(const Clustering::Point &point, const Clustering::Point &point1) {

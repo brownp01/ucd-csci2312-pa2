@@ -62,21 +62,21 @@ int main(){
     cout << "p1 / 3 is " << p1;
     cout << endl;
 
-    p3 + p2;
-    cout << "p3 + p2 is " << p3;
+    p3 = p1 + p2;
+    cout << "p1 + p2 is " << p3;
     cout << endl;
 
-    p3 - p2;
-    cout << "p3 - p2 is " << p3;
+    p1 = p3 - p2;
+    cout << "p3 - p2 is " << p1;
     cout << endl;
 
     //Test the boolean operators
 
     assert(p2 == p1);
-    assert(p3 != p2);
-    assert(p3 < p2);
-    assert(p1 > p3);
-    assert(p3 <= p2);
+    assert(p3 != p1);
+    assert(p2 < p3);
+    assert(p3 > p2);
+    assert(p2 <= p3);
     assert(p1 >= p2);
 
     cout << "assert testing of boolean operators complete" << endl;

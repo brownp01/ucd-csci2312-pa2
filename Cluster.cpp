@@ -18,6 +18,24 @@ Clustering::Cluster::~Cluster() {
 
 void Clustering::Cluster::add(Clustering::PointPtr const &ptr) {
 
+    //1. Find the right spot in the chain
+    //2. Create a new node
+    // assign ptr
+    //3. insert into the chain
+    //c1.add(&p);
+    //points == head (data structures)
+
+    if (size == 0)
+        points = new LNode(ptr, nullptr);
+
+    else{
+        LNodePtr c = points, n = points->next, a = new LNode(ptr, nullptr);
+    }
+
+    for (LNodePtr curr = points; curr != nullptr; curr = curr->next){
+
+    }
+
 }
 
 /*Clustering::PointPtr const &Clustering::Cluster::remove(Clustering::PointPtr const &ptr) {
@@ -53,7 +71,10 @@ Clustering::Cluster &Clustering::Cluster::operator-=(const Clustering::Point &rh
 }
 
 const Clustering::Cluster Clustering::operator+(const Clustering::Cluster &lhs, const Clustering::Cluster &rhs) {
-    return Clustering::Cluster();
+
+    Cluster newCluster = Cluster();
+
+    return newCluster;
 }
 
 const Clustering::Cluster Clustering::operator-(const Clustering::Cluster &lhs, const Clustering::Cluster &rhs) {
