@@ -7,6 +7,8 @@
 
 Clustering::Cluster::Cluster(const Clustering::Cluster &cluster) {
 
+    m_cpy(cluster.m_Points);
+
 }
 
 Clustering::Cluster &Clustering::Cluster::operator=(const Clustering::Cluster &cluster) {
@@ -136,6 +138,7 @@ Clustering::PointPtr const &Clustering::Cluster::remove(Clustering::PointPtr con
 //const Clustering::Cluster Clustering::operator-(const Clustering::Cluster &lhs, Clustering::PointPtr const &rhs) {
 //    return Clustering::Cluster();
 //}*/
+
 void Clustering::Cluster::m_del() {
 
     if (m_Size != 0){
