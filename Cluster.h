@@ -32,22 +32,22 @@ namespace Clustering {
 
     public:
         Cluster() : m_Size(0), m_Points(nullptr), m_Release_points(false), m_Greedy(false) {};
-        Cluster(bool rp, bool gdy) : m_Size(0), m_Points(nullptr), m_Release_points(rp), m_Greedy(true) {};
+        Cluster(bool rp) : m_Size(0), m_Points(nullptr), m_Release_points(rp), m_Greedy(true) {};
         Cluster (bool rp, bool gdy) : m_Size(0), m_Points(nullptr), m_Release_points(rp), m_Greedy(gdy) {};
 
         // The big three: cpy ctor, overloaded operator=, dtor
         Cluster(const Cluster &);
-        //Cluster &operator=(const Cluster &);
+        Cluster &operator=(const Cluster &);
         ~Cluster();
 
         // Set functions: They allow calling c1.add(c2.remove(p));
         void add(const PointPtr &);
-        /*const PointPtr &remove(const PointPtr &);
+        const PointPtr &remove(const PointPtr &);
 
         // Overloaded operators
 
         // IO
-        friend std::ostream &operator<<(std::ostream &, const Cluster &);
+        /*friend std::ostream &operator<<(std::ostream &, const Cluster &);
         friend std::istream &operator>>(std::istream &, Cluster &);
 
         // Set-preserving operators (do not duplicate points in the space)
