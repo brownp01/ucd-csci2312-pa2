@@ -22,11 +22,18 @@ namespace Clustering {
     };
 
     class Cluster {
-        int size;
-        LNodePtr points;
+        int m_Size;
+        LNodePtr m_Points;
+        bool m_Release_points;
+        bool m_Greedy;
+
+        void m_del();
+        void m_cpy(LNodePtr pts);
 
     public:
-        Cluster() : size(0), points(nullptr) {};
+        Cluster() : m_Size(0), m_Points(nullptr), m_Release_points(false), m_Greedy(false) {};
+        Cluster(bool rp, bool gdy) : m_Size(0), m_Points(nullptr), m_Release_points(rp), m_Greedy(true) {};
+        Cluster (bool rp, bool gdy) : m_Size(0), m_Points(nullptr), m_Release_points(rp), m_Greedy(gdy) {};
 
         // The big three: cpy ctor, overloaded operator=, dtor
         Cluster(const Cluster &);

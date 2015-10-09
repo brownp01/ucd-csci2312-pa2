@@ -15,12 +15,9 @@ Clustering::Point::Point(int initDim) {
 
 }
 
-Clustering::Point::Point(int initDim, double initValues[]) {
+Clustering::Point::Point(int initDim, double *initValues) : Point(initDim) {
 
-    m_Dim = initDim;
-    m_Values = new double[m_Dim];
-
-    for (int i = 0; i < m_Dim; i++)
+    for (int i = 0; i < initDim; i++)
         m_Values[i] = initValues[i];
 
 }
@@ -204,7 +201,7 @@ bool Clustering::operator>=(const Clustering::Point &point, const Clustering::Po
 std::ostream &Clustering::operator<<(std::ostream &out, const Clustering::Point &point) {
 
     for (int i = 0; i < point.m_Dim; i++)
-        out << point.m_Values[i] << " ";
+        out << point.m_Values[i] << ", ";
 
     return out;
 }
