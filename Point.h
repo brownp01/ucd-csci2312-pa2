@@ -16,6 +16,7 @@ namespace Clustering {
     public:
         Point(int);
         Point(int, double*);
+        static const char POINT_VALUE_DELIM;
 
         // Big three: cpy ctor, overloaded operator=, dtor
         Point(const Point &);

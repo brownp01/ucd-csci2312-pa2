@@ -3,6 +3,7 @@
 //
 
 #include "Point.h"
+#include "Cluster.h"
 #include <cassert>
 
 
@@ -95,6 +96,11 @@ int main(){
     assert(p1 >= p2);
 
     cout << "assert testing of boolean operators complete" << endl;
+
+    Cluster c1;
+    Cluster c2;
+
+
 
 
     return 0;
